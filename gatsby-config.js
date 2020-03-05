@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/ALG101-too-weak-to-leetcode/docs`,
+  pathPrefix: `/ALG101-too-weak-to-leetcode/public`,
   plugins: [
     {
       resolve: 'gatsby-theme-mdx-deck',
