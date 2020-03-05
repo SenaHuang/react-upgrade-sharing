@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c4960cf-6ec9-490d-afa7-9dacfbcb8ab3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/0/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/0/page-data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/0/print/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/1/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/1/page-data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/1/print/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/dev-404-page/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/slides/0.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/slides/0.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slides/1.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/slides/1.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
