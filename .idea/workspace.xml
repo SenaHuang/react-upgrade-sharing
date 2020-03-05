@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c4960cf-6ec9-490d-afa7-9dacfbcb8ab3" name="Default Changelist" comment="" />
+    <list default="true" id="8c4960cf-6ec9-490d-afa7-9dacfbcb8ab3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Yh11cLH84bXMpPF5NBZwVl3eQk" />
   <component name="ProjectViewState">
@@ -78,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583379797716</updated>
-      <workItem from="1583379799155" duration="9169000" />
+      <workItem from="1583379799155" duration="9330000" />
+      <workItem from="1583395983226" duration="67000" />
     </task>
     <servers />
   </component>
@@ -90,22 +97,70 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="258" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583384703710" />
-    <state width="1419" height="230" key="GridCell.Tab.0.bottom" timestamp="1583393115815">
+    <state width="1419" height="285" key="GridCell.Tab.0.bottom" timestamp="1583396112671">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583393115815" />
-    <state width="1419" height="230" key="GridCell.Tab.0.center" timestamp="1583393115814">
+    <state width="1419" height="285" key="GridCell.Tab.0.bottom/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112671" />
+    <state width="1419" height="285" key="GridCell.Tab.0.center" timestamp="1583396112669">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="230" key="GridCell.Tab.0.center/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583393115814" />
-    <state width="1419" height="230" key="GridCell.Tab.0.left" timestamp="1583393115813">
+    <state width="1419" height="285" key="GridCell.Tab.0.center/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112669" />
+    <state width="1419" height="285" key="GridCell.Tab.0.left" timestamp="1583396112669">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="230" key="GridCell.Tab.0.left/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583393115813" />
-    <state width="1419" height="230" key="GridCell.Tab.0.right" timestamp="1583393115815">
+    <state width="1419" height="285" key="GridCell.Tab.0.left/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112669" />
+    <state width="1419" height="285" key="GridCell.Tab.0.right" timestamp="1583396112670">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="230" key="GridCell.Tab.0.right/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583393115815" />
+    <state width="1419" height="285" key="GridCell.Tab.0.right/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112670" />
+    <state width="1419" height="285" key="GridCell.Tab.1.bottom" timestamp="1583396112672">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112672" />
+    <state width="1419" height="285" key="GridCell.Tab.1.center" timestamp="1583396112672">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.center/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112672" />
+    <state width="1419" height="285" key="GridCell.Tab.1.left" timestamp="1583396112671">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.left/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112671" />
+    <state width="1419" height="285" key="GridCell.Tab.1.right" timestamp="1583396112672">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.right/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112672" />
+    <state width="1419" height="285" key="GridCell.Tab.2.bottom" timestamp="1583396112674">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.2.bottom/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112674" />
+    <state width="1419" height="285" key="GridCell.Tab.2.center" timestamp="1583396112673">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.2.center/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112673" />
+    <state width="1419" height="285" key="GridCell.Tab.2.left" timestamp="1583396112673">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.2.left/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112673" />
+    <state width="1419" height="285" key="GridCell.Tab.2.right" timestamp="1583396112673">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.2.right/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112673" />
+    <state width="1419" height="285" key="GridCell.Tab.3.bottom" timestamp="1583396112676">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.3.bottom/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112676" />
+    <state width="1419" height="285" key="GridCell.Tab.3.center" timestamp="1583396112675">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.3.center/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112675" />
+    <state width="1419" height="285" key="GridCell.Tab.3.left" timestamp="1583396112675">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.3.left/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112675" />
+    <state width="1419" height="285" key="GridCell.Tab.3.right" timestamp="1583396112676">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.3.right/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583396112676" />
     <state x="378" y="223" width="683" height="476" key="find.popup" timestamp="1583393920681">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

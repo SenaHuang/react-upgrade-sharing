@@ -1,7 +1,5 @@
-const proj = require('./package.json').name;
-
 module.exports = {
-  pathPrefix: `/${proj}`,
+  pathPrefix: `/ALG101-too-weak-to-leetcode/docs`,
   plugins: [
     {
       resolve: 'gatsby-theme-mdx-deck',
