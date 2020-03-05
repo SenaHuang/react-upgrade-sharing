@@ -78,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583379797716</updated>
-      <workItem from="1583379799155" duration="8498000" />
+      <workItem from="1583379799155" duration="9169000" />
     </task>
     <servers />
   </component>
@@ -106,13 +106,17 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1419" height="230" key="GridCell.Tab.0.right/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583393115815" />
-    <state x="378" y="223" width="683" height="476" key="find.popup" timestamp="1583392942552">
+    <state x="378" y="223" width="683" height="476" key="find.popup" timestamp="1583393920681">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="378" y="223" width="683" height="476" key="find.popup/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583392942552" />
+    <state x="378" y="223" width="683" height="476" key="find.popup/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583393920681" />
     <state x="385" y="211" width="670" height="675" key="run.anything.popup" timestamp="1583384719267">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="211" width="670" height="675" key="run.anything.popup/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583384719267" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1583393925874">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1179.-1057.1920.1057/741.-1057.1920.1057@0.23.1440.877" timestamp="1583393925874" />
   </component>
 </project>

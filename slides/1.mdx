@@ -1,0 +1,242 @@
+import { Head, Notes } from 'mdx-deck';
+import { defaultThemes } from '../theme';
+import { CodeSurfer, Step, CodeSurferColumns } from "code-surfer";
+
+export const themes = defaultThemes;
+
+<Head>
+  <title>React升版計畫</title>
+</Head>
+
+---
+
+# React 15.6.2 -> 16.12.0
+
+---
+
+## Component 生命週期
+
+---
+
+<CodeSurfer >
+
+```js
+1. componentWillMount()
+2. componentWillUpdate()
+3. componentWillReceiveProps()
+```
+
+```diff 1 subtitle="在 mounting 發生前被呼叫"
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```js
+    componentWillMount() {
+		new Ajax({
+			url: '/hrm2/api/company/picker/departments',
+			method: 'get',
+			onSuccess: (code, msg, data, xhr) => {
+				this.setState({
+					deps: data
+				});
+			}
+		}).send();
+    }
+```
+
+```diff 6:8
+    componentWillMount() {
+		new Ajax({
+			url: '/hrm2/api/company/picker/departments',
+			method: 'get',
+			onSuccess: (code, msg, data, xhr) => {
+				this.setState({
+					deps: data
+				});
+			}
+		}).send();
+    }
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+``` markup
+初始化 state
+setState
+```
+
+``` markup diff 1:2
+初始化 state
+    - constructor()
+setState
+```
+
+``` markup diff 3:4
+初始化 state
+    - constructor()
+setState
+    - componentDidMount()
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer >
+
+```js
+1. componentWillMount()
+2. componentWillUpdate()
+3. componentWillReceiveProps()
+```
+
+```js diff 2 subtitle="render 發生之前、state 更新之前、prop 更新之前"
+1. componentWillMount()
+2. componentWillUpdate()
+3. componentWillReceiveProps()
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```js
+componentWillUpdate(nextProps, nextState, nextContext) {
+    const {empId} = this.props;
+    if(empId != nextProps.empId)
+        this._loadPhoto(nextProps.empId);
+}
+```
+
+```js subtitle="通常可以用 componentDidUpdate() 取代"
+
+componentWillUpdate(nextProps, nextState, nextContext) {
+    const {empId} = this.props;
+    if(empId != nextProps.empId)
+        this._loadPhoto(nextProps.empId);
+}
+
+componentDidUpdate(prevProps, prevState, snapshot) {
+    const {empId} = this.props;
+    if(empId != prevProps.empId)
+        this._loadPhoto(empId);
+}
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer >
+
+```js diff 3
+1. componentWillMount()
+2. componentWillUpdate()
+3. componentWillReceiveProps()
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer >
+
+``` markup
+需要在某個 prop 改變時 執行一個相對應的 side effect
+在某個 prop 改變時「重置」某個 state
+```
+
+``` markup diff 1:2
+需要在某個 prop 改變時 執行一個相對應的 side effect
+    - componentDidUpdate()
+在某個 prop 改變時「重置」某個 state
+```
+
+``` markup diff 3:4
+需要在某個 prop 改變時 執行一個相對應的 side effect
+    - componentDidUpdate()
+在某個 prop 改變時「重置」某個 state
+    - 建立一個完全被控制 的 component 或帶有 key 的完全被控制 component
+```
+
+```js
+function EmailInput(props) {
+  return <input
+              onChange={props.onChange}
+              value={props.email}
+         />;
+}
+```
+
+```js diff 3:4
+function EmailInput(props) {
+  return <input
+              onChange={props.onChange}
+              value={props.email}
+         />;
+}
+```
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```js
+class EmailInput extends Component {
+  state = { email: this.props.defaultEmail };
+
+  handleChange = event => {
+    this.setState({ email: event.target.value });
+  };
+
+  render() {
+    return <input onChange={this.handleChange} value={this.state.email} />;
+  }
+}
+```
+
+```js diff 2
+class EmailInput extends Component {
+  state = { email: this.props.defaultEmail };
+
+  handleChange = event => {
+    this.setState({ email: event.target.value });
+  };
+
+  render() {
+    return <input onChange={this.handleChange} value={this.state.email} />;
+  }
+}
+```
+
+</CodeSurfer>
+
+---
+
+## memory leaks
+
+---
+
+(範例)
+
+---
+
+## insertBefore
+
+---
+
+(範例)
+
+
