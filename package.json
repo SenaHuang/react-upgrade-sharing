@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rm -rf .cache docs public",
     "start": "yarn clean && gatsby develop",
-    "build": "yarn clean && gatsby build --prefix-paths && mv public docs"
+    "build": "yarn clean && gatsby build --prefix-paths"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

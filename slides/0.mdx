@@ -233,10 +233,90 @@ class EmailInput extends Component {
 
 ---
 
-## insertBefore
+## 常見錯誤
 
 ---
 
 (範例)
+
+---
+
+<CodeSurfer>
+
+```js
+backend.js:6 Warning: Expected `onClick` listener to be a function, instead got a value of `string` type.
+
+// Before
+onClick={someHandler.bind(this, ...arguments)}
+```
+
+```js
+backend.js:6 Warning: Expected `onClick` listener to be a function, instead got a value of `string` type.
+
+// Before
+onClick={someHandler.bind(this, ...arguments)}
+
+// After
+onClick={() => someHandler(...arguments)}
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```js
+Warning: Invalid value for prop `data-display` on <td> tag. 
+Either remove it from the element, or pass a string or number value to keep it in the DOM.
+
+// Before
+<td width="20%" data-display={function(data){...}}
+```
+
+```js
+Warning: Invalid value for prop `data-display` on <td> tag. 
+Either remove it from the element, or pass a string or number value to keep it in the DOM.
+
+// Before
+<td width="20%" data-display={function(data){...}}
+
+// After
+<td width="20%" data-display={`function(data){...}`}
+```
+
+</CodeSurfer>
+
+---
+
+
+<CodeSurfer>
+
+```js
+Warning: React does not recognize the `data-td-cssClass` prop on a DOM element.
+If you intentionally want it to appear in the DOM as a custom attribute,
+spell it as lowercase `data-td-cssclass` instead
+
+// Before
+<td width="35%" data-td-cssClass="'text-sm text-nowrap'">
+```
+
+```js
+Warning: React does not recognize the `data-td-cssClass` prop on a DOM element.
+If you intentionally want it to appear in the DOM as a custom attribute,
+spell it as lowercase `data-td-cssclass` instead
+
+// Before
+<td width="35%" data-td-cssClass="'text-sm text-nowrap'">
+
+// After
+<td width="35%" data-td-cssclass="'text-sm text-nowrap'">
+```
+
+</CodeSurfer>
+
+---
+
+thank you ~ ❤️
 
 
