@@ -253,13 +253,13 @@ This is a no-op, but it indicates a memory leak in your application.
 To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
 
 componentDidMount() {
-        new Ajax({
-            url: '/hrm2/api/auth/module',
-            method: 'get',
-            onSuccess: (code, msg, data, xhr) => this.setState({
-                m4: data.includes(4)
-            })
-        }).send();
+    new Ajax({
+        url: '/hrm2/api/auth/module',
+        method: 'get',
+        onSuccess: (code, msg, data, xhr) => {
+            this.setState({ m4: data.includes(4) })
+        }
+    }).send();
 }
 ```
 
@@ -270,15 +270,15 @@ To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmo
 
 componentDidMount() {
     this.mounted = true;
-    if (this.mounted) {
-        new Ajax({
-            url: '/hrm2/api/auth/module',
-            method: 'get',
-            onSuccess: (code, msg, data, xhr) => this.setState({
-                m4: data.includes(4)
-            })
-        }).send();
-    }
+    new Ajax({
+        url: '/hrm2/api/auth/module',
+        method: 'get',
+        onSuccess: (code, msg, data, xhr) => {
+            if (this.mounted) {
+                this.setState({ m4: data.includes(4) })
+            }
+        }
+    }).send();
 }
 
 componentWillUnmount() {
