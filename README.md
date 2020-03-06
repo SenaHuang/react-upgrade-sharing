@@ -4,6 +4,6 @@
 
 
 技術參考：
-https://github.com/pengx17/slides
-https://github.com/jxnblk/mdx-deck
-https://codesurfer.pomb.us/
+- https://github.com/pengx17/slides
+- https://github.com/jxnblk/mdx-deck
+- https://codesurfer.pomb.us/
