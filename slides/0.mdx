@@ -14,7 +14,7 @@ export const themes = defaultThemes;
 
 ---
 
-## Component 生命週期
+## 過時的 Component 生命週期
 
 ---
 
@@ -153,24 +153,30 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 <CodeSurfer >
 
 ``` markup
-需要在某個 prop 改變時 執行一個相對應的 side effect
-在某個 prop 改變時「重置」某個 state
-```
+componentWillReceiveProps()
 
-``` markup diff 1:2
-需要在某個 prop 改變時 執行一個相對應的 side effect
-    - componentDidUpdate()
-在某個 prop 改變時「重置」某個 state
+    * 需要在某個 prop 改變時 執行一個相對應的 side effect
+    * 在某個 prop 改變時「重置」某個 state
 ```
 
 ``` markup diff 3:4
-需要在某個 prop 改變時 執行一個相對應的 side effect
-    - componentDidUpdate()
-在某個 prop 改變時「重置」某個 state
-    - 建立一個完全被控制 的 component 或帶有 key 的完全被控制 component
+componentWillReceiveProps()
+
+    * 需要在某個 prop 改變時 執行一個相對應的 side effect
+        - componentDidUpdate()
+    * 在某個 prop 改變時「重置」某個 state
 ```
 
-```js
+``` markup diff 5:6
+componentWillReceiveProps()
+
+    * 需要在某個 prop 改變時 執行一個相對應的 side effect
+        - componentDidUpdate()
+    * 在某個 prop 改變時「重置」某個 state
+        - 建立一個完全被控制 的 component 或帶有 key 的完全被控制 component
+```
+
+```js subtitle="完全被控制 的 component"
 function EmailInput(props) {
   return <input
               onChange={props.onChange}
@@ -193,7 +199,7 @@ function EmailInput(props) {
 
 <CodeSurfer>
 
-```js
+```js subtitle="帶有 key 的完全被控制 component"
 class EmailInput extends Component {
   state = { email: this.props.defaultEmail };
 
@@ -205,9 +211,14 @@ class EmailInput extends Component {
     return <input onChange={this.handleChange} value={this.state.email} />;
   }
 }
+
+<EmailInput
+   defaultEmail={this.props.user.email}
+   key={this.props.user.id}
+ />
 ```
 
-```js diff 2
+```js diff 2,14:15
 class EmailInput extends Component {
   state = { email: this.props.defaultEmail };
 
@@ -219,6 +230,11 @@ class EmailInput extends Component {
     return <input onChange={this.handleChange} value={this.state.email} />;
   }
 }
+
+<EmailInput
+   defaultEmail={this.props.user.email}
+   key={this.props.user.id}
+ />
 ```
 
 </CodeSurfer>
@@ -229,7 +245,48 @@ class EmailInput extends Component {
 
 ---
 
-(範例)
+<CodeSurfer>
+
+```js
+Warning: Can't perform a React state update on an unmounted component.
+This is a no-op, but it indicates a memory leak in your application.
+To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+
+componentDidMount() {
+        new Ajax({
+            url: '/hrm2/api/auth/module',
+            method: 'get',
+            onSuccess: (code, msg, data, xhr) => this.setState({
+                m4: data.includes(4)
+            })
+        }).send();
+}
+```
+
+```js
+Warning: Can't perform a React state update on an unmounted component.
+This is a no-op, but it indicates a memory leak in your application.
+To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
+
+componentDidMount() {
+    this.mounted = true;
+    if (this.mounted) {
+        new Ajax({
+            url: '/hrm2/api/auth/module',
+            method: 'get',
+            onSuccess: (code, msg, data, xhr) => this.setState({
+                m4: data.includes(4)
+            })
+        }).send();
+    }
+}
+
+componentWillUnmount() {
+    this.mounted = false;
+}
+```
+
+</CodeSurfer>
 
 ---
 
@@ -237,21 +294,19 @@ class EmailInput extends Component {
 
 ---
 
-(範例)
-
----
-
 <CodeSurfer>
 
 ```js
-backend.js:6 Warning: Expected `onClick` listener to be a function, instead got a value of `string` type.
+Warning: Expected `onClick` listener to be a function,
+instead got a value of `string` type.
 
 // Before
 onClick={someHandler.bind(this, ...arguments)}
 ```
 
 ```js
-backend.js:6 Warning: Expected `onClick` listener to be a function, instead got a value of `string` type.
+Warning: Expected `onClick` listener to be a function,
+instead got a value of `string` type.
 
 // Before
 onClick={someHandler.bind(this, ...arguments)}
@@ -311,6 +366,75 @@ spell it as lowercase `data-td-cssclass` instead
 
 // After
 <td width="35%" data-td-cssclass="'text-sm text-nowrap'">
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```js
+Failed to execute 'insertBefore' on 'Node':
+The node before which the new node is to be inserted is not a child of this node.
+
+class EmpPicker extends React.Component{
+
+	render(){
+        // ...
+		return <div ref={ele => this._dom.root = ele} className={className + ' EmpPicker' + (advance ? ' adv' : '')}>
+			{empty && loading ? <div className={'loading loading-md'} /> : null}
+			{empty && !loading ? <div className={'notice ico ico-s ico-alert'}>無符合條件的員工</div> : null}
+			<span ref={ele => this._dom.picker = ele} />
+			{advance && !empty ? <span ref={ele => this._dom.advBtn = ele}
+									className={'-adv btn btn-white btn-sm ico ico-search' + (adv ? ' active' : '')}
+									onClick={_advMode} /> : null }
+			{advance && !empty ? <_AdvPanel ref={ele => this.advPanel = ele} parent={this} api={url ? url : null} /> : null}
+		</div>
+	}
+}
+```
+
+```js diff 1:2,4,11,18
+Failed to execute 'insertBefore' on 'Node':
+The node before which the new node is to be inserted is not a child of this node.
+
+class EmpPicker extends React.Component{
+
+	render(){
+        // ...
+		return <div ref={ele => this._dom.root = ele} className={className + ' EmpPicker' + (advance ? ' adv' : '')}>
+			{empty && loading ? <div className={'loading loading-md'} /> : null}
+			{empty && !loading ? <div className={'notice ico ico-s ico-alert'}>無符合條件的員工</div> : null}
+			<span ref={ele => this._dom.picker = ele} />
+			{advance && !empty ? <span ref={ele => this._dom.advBtn = ele}
+									className={'-adv btn btn-white btn-sm ico ico-search' + (adv ? ' active' : '')}
+									onClick={_advMode} /> : null }
+			{advance && !empty ? <_AdvPanel ref={ele => this.advPanel = ele} parent={this} api={url ? url : null} /> : null}
+		</div>
+	}
+}
+```
+```js diff 1:2,11:12
+Failed to execute 'insertBefore' on 'Node':
+The node before which the new node is to be inserted is not a child of this node.
+
+class EmpPicker extends React.Component{
+
+	render(){
+        // ...
+		return <div ref={ele => this._dom.root = ele} className={className + ' EmpPicker' + (advance ? ' adv' : '')}>
+			{empty && loading ? <div className={'loading loading-md'} /> : null}
+			{empty && !loading ? <div className={'notice ico ico-s ico-alert'}>無符合條件的員工</div> : null}
+            <div></div>
+			<span ref={ele => this._dom.picker = ele} />
+			{advance && !empty ? <span ref={ele => this._dom.advBtn = ele}
+									className={'-adv btn btn-white btn-sm ico ico-search' + (adv ? ' active' : '')}
+									onClick={_advMode} /> : null }
+			{advance && !empty ? <_AdvPanel ref={ele => this.advPanel = ele} parent={this} api={url ? url : null} /> : null}
+		</div>
+	}
+}
 ```
 
 </CodeSurfer>
